@@ -14,4 +14,6 @@
 
     >$ git push origin main # encaminha as alterações feitas localmente ao endereço contido no origin para o main.
 
+    >$ git pull origin main # pucha as alterações feitas no servidor para o repositorio local.
+
     >$ git remote -v # verifica a qual servidor remoto o Git esta ligado, informa o apelido desse servidor
