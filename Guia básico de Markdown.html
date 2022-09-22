@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html>
+    <!-- <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Guia básico de Markdown</title>
+        
+        
+        <link rel=”canonical” href=//docs.pipz.com/central-de-ajuda/learning-center/guia-basico-de-markdown”>
+        <meta name="robots" content="index, follow">
+
+        <link href="//fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/static/modern/style/main.css">
+        <link rel="stylesheet" href="/static/modern/style/icons.css">
+        <link rel="stylesheet" href="/static/modern/style/responsive.css">
+
+        
+            <link rel="stylesheet" href="/static/modern/style/monokai.css">
+        
+
+        <style>
+            
+    :root {
+
+        /* ####### CORES ###### */
+
+        /* BG página */
+        --bg-page: #FFF;
+
+        /* Cor da fonte Artigos */
+        --text-color: #455a64;
+
+        /* Link de Artigos */
+        --link-color: #0086Be;
+
+        /* BG Logo */
+        --bg-logo: #ffffff;
+
+        /* BG Menu Superior */
+        --bg-top-bar: #FFF;
+
+        /* Cor Link Menu Superior */
+        --link-top-bar: #455a64;
+
+        /* Hover Menu Superior */
+        --link-top-bar-hover: #00afac;
+
+        /* BG Barra Lateral */
+        --bg-side-bar: #455a64;
+
+        /* Padding Itens Sidebar */
+        --link-side-bar-padding: 10px 20px;
+
+        /* Cor Itens Sidebar */
+        --link-side-bar: #93a6ad;
+
+        /* Cor Itens Sidebar Hover */
+        --link-side-bar-hover: #d6e5ea;
+        --bg-link-side-bar-hover: #506773;
+
+        /* Cor Sub-Itens Sidebar */
+        --bg-link-side-bar-sub: #36444a;
+
+        /* Cor Sub-Itens Sidebar Hover */
+        --link-side-bar-sub-hover: #adfffe;
+        --bg-link-side-bar-sub-hover: #293338;
+
+        /* Cor Highlight */
+        --search-highlight: #fbf1ab;
+
+        /* >>>> ESTRUTURA <<<< */
+
+        /* Largura Logo/Menu */
+        --side-bar-width: 300px;
+
+        /* Altura Logo/Topbar */
+        --top-bar-height: 60px;
+
+        /* Largura artigo */
+        --article-width: 900px;
+
+        /* Padding Article */
+        --article-padding: 70px;
+
+        /* MAIS OU SETA NA SIDEBAR */
+        --plus-or-arrow: '▸ ';
+
+    }
+        </style>
+
+    </head>
+
+    <body class="learning-center-2">
+        <nav>
+            <div class="mobile-menu-container">
+            </div>
+            <div class="burger-menu">☰</div>
+            <div class="logo">
+                <a href="/">
+    <img src="//pipz.io/shared/1/files/logo_academy.JPG" alt="Logo" />
+</a>
+            </div>
+            <div class="lc-top-bar">
+                <ul class="lc-bases">
+                    <div class="lc-bases-lis">
+                        
+                           <li class="lc-bases-item active"><a
+                           href="/br/central-de-ajuda/">Central de Ajuda</a></li>
+                        
+                           <li class="lc-bases-item "><a
+                           href="/br/faq/">FAQ</a></li>
+                        
+                           <li class="lc-bases-item "><a
+                           href="/br/videos-onboarding/">Vídeos</a></li>
+                        
+                           <li class="lc-bases-item "><a
+                           href="/br/api-docs/">API Docs</a></li>
+                        
+                           <li class="lc-bases-item "><a
+                           href="/br/integracoes/">Integrações</a></li>
+                        
+                        <div class="lc-bases-more"><ul></ul></div>
+
+                        <div class="lc-bases-language">
+                            <ul class="lc-bases-language-select">
+                                <li class="lc-lang-selected">
+                                    <img class="lc-lang-img" src="https://cdn.rawgit.com/hjnilsson/country-flags/master/svg/br.svg" alt="">
+                                </li>
+                                <div class="lc-lang-list" id="lc-lang-list">
+                                    <div class="lc-lang-list-scroll">
+                                        
+                                            <li class="lc-lang-item">
+                                                <a href="/br/">
+                                                    <img class="lc-lang-img" src="https://cdn.rawgit.com/hjnilsson/country-flags/master/svg/br.svg" alt="">
+                                                    <span class="lc-lang-text">br</span>
+                                                </a>
+                                            </li>
+                                        
+                                            <li class="lc-lang-item">
+                                                <a href="/us/">
+                                                    <img class="lc-lang-img" src="https://cdn.rawgit.com/hjnilsson/country-flags/master/svg/us.svg" alt="">
+                                                    <span class="lc-lang-text">us</span>
+                                                </a>
+                                            </li>
+                                        
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <select name="lc-bases-select" id="lc-bases-select" class="lc-bases-select" onchange="location = this.value;">
+                        
+                        <option value="/br/central-de-ajuda/" selected>Central de Ajuda</option>
+                        
+                        <option value="/br/faq/" >FAQ</option>
+                        
+                        <option value="/br/videos-onboarding/" >Vídeos</option>
+                        
+                        <option value="/br/api-docs/" >API Docs</option>
+                        
+                        <option value="/br/integracoes/" >Integrações</option>
+                        
+                    </select>
+                </ul>
+            </div>
+            <div class="external-links"></div>
+        </nav>
+        <section class="lc-content lc-article-sidebar">
+            <div id="searchResult" class="lc-search-result">
+                <div class="lc-search-result-wrapper">
+                    <h1>Searching for <span id="searchFor"></span> <span class="lc-search-metrics"></span></h1>
+                    <div class="lc-search-result-container">
+                    </div>
+                    <div id="searchFooter" class="lc-search-result-footer"></div>
+                </div>
+            </div>
+            <aside class="lc-sidebar">
+                <form onsubmit="return handleSearch()" class="search">
+                    <input id="searchInput" type="text" class="search-input" placeholder="Search..." autocomplete="off">
+                    <button id="searchButton" class="lc-search-button lc-search" type="button"></button>
+                    <div class="lc-instant-search"></div>
+                </form>
+                <ul class="lc-topic-list">
+                    
+                        
+
+                        
+					
+                        
+                            <span class="lc-topic-category">Primeiros passos</span>
+                        
+
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/primeiros-passos/"
+                                 id=""
+                                 class=" ">
+                                Introdução
+                              </a>
+
+                            
+
+                            </li>
+                        
+					
+                        
+                            <span class="lc-topic-category">Configurações Iniciais</span>
+                        
+
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/event-tracking/"
+                                 id=""
+                                 class=" lc-sub-contain ">
+                                Event tracking
+                              </a>
+
+                            
+                                <ul class="lc-sub-menu">
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/event-tracking/o-que-e-o-tracker/" class="">O que é o tracker</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/event-tracking/criacao-e-instalacao/" class="">Criação e instalação</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/event-tracking/identificar-contatos-e-empresas/" class="">Identificar contatos e empresas</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/event-tracking/enviar-eventos-personalizados/" class="">Enviar eventos personalizados</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/event-tracking/eventos-para-e-commerce/" class="">Eventos para e-commerce</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/event-tracking/contatos-anonimos-e-identificados/" class="">Contatos anônimos e identificados</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/event-tracking/eventos-registrados-no-sistema/" class="">Eventos registrados no sistema</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/event-tracking/timeline-de-eventos/" class="">Timeline de eventos</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/event-tracking/codigo-de-retorno-json/" class="">Código de retorno JSON</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/event-tracking/integrar-formularios-externos/" class="">Integrar formulários externos</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/event-tracking/ignorar-ips/" class="">Ignorar IP's</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/event-tracking/guia-para-google-tag-manager/" class="">Guia para Google Tag Manager</a>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            
+
+                            </li>
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/domains/"
+                                 id=""
+                                 class=" lc-sub-contain ">
+                                Domains
+                              </a>
+
+                            
+                                <ul class="lc-sub-menu">
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/domains/spfdkim/" class="">SPF/DKIM</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/domains/tracking/" class="">Tracking</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/domains/return-path/" class="">Return Path</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/domains/dominio-de-learning-center/" class="">Domínio de Learning Center</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/domains/dominio-de-pages/" class="">Domínio de Pages</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/domains/dominio-de-acesso-personalizado/" class="">Custom Domains</a>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            
+
+                            </li>
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/email-accounts/"
+                                 id=""
+                                 class=" lc-sub-contain ">
+                                Email accounts
+                              </a>
+
+                            
+                                <ul class="lc-sub-menu">
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/email-accounts/criar-e-autenticar-conta-de-e-mail/" class="">Criar e autenticar conta de e-mail</a>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            
+
+                            </li>
+                        
+					
+                        
+                            <span class="lc-topic-category">Integrações</span>
+                        
+
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/integracao-com-facebook/"
+                                 id=""
+                                 class=" lc-sub-contain ">
+                                Integração com Facebook
+                              </a>
+
+                            
+                                <ul class="lc-sub-menu">
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/integracao-com-facebook/facebook-forms/" class="">Facebook Forms</a>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            
+
+                            </li>
+                        
+					
+                        
+                            <span class="lc-topic-category">Gerenciar Contatos e Empresas</span>
+                        
+
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/contacts/"
+                                 id=""
+                                 class=" lc-sub-contain ">
+                                Contacts
+                              </a>
+
+                            
+                                <ul class="lc-sub-menu">
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/contacts/importacao-de-contatos/" class="">Importação de contatos</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/contacts/perfil-dos-contatos/" class="">Perfil dos contatos</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/contacts/lifecycle-do-contato/" class="">Lifecycle do contato</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/contacts/origem-e-eventos-registrados/" class="">Origem e eventos registrados</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/contacts/listas-de-contatos/" class="">Listas de contatos</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/contacts/exportacao-de-contatos/" class="">Exportação de contatos</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/contacts/optin-e-optout-no-pipz/" class="">Optin e Optout no Pipz</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/contacts/conhecendo-os-email-status-do-pipz/" class="">Conhecendo os Email Status do Pipz</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/contacts/adicionando-tag-em-contato-ao-clicar-em-botao-de-campanha-ou-automacao/" class="">Adicionando tag em contato ao clicar em botão de campanha ou automação</a>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            
+
+                            </li>
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/companies/"
+                                 id=""
+                                 class=" lc-sub-contain ">
+                                Companies
+                              </a>
+
+                            
+                                <ul class="lc-sub-menu">
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/companies/cadastro-de-empresas/" class="">Cadastro de empresas</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/companies/lifecycle-da-empresa/" class="">Lifecycle da empresa</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/companies/contatos-vinculados/" class="">Contatos vinculados</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/companies/eventos-registrados/" class="">Eventos registrados</a>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            
+
+                            </li>
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/custom-fields/"
+                                 id=""
+                                 class=" lc-sub-contain ">
+                                Custom fields
+                              </a>
+
+                            
+                                <ul class="lc-sub-menu">
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/custom-fields/gerenciar-campos-personalizados-do-sistema/" class="">Gerenciar campos personalizados do sistema</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/custom-fields/envio-de-campos-personalizados-via-eventos/" class="">Envio de campos personalizados via eventos</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/custom-fields/fieldsets/" class="">Fieldsets</a>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            
+
+                            </li>
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/lifecycle-stage/"
+                                 id=""
+                                 class=" lc-sub-contain ">
+                                Lifecycle Stage
+                              </a>
+
+                            
+                                <ul class="lc-sub-menu">
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/lifecycle-stage/como-funciona/" class="">Como funciona</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/lifecycle-stage/criar-estagios-no-sistema/" class="">Criar estágios no sistema</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/lifecycle-stage/definir-estagio-padrao/" class="">Definir estágio padrão</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/lifecycle-stage/atualizar-estagio-do-cliente/" class="">Atualizar estágio do cliente</a>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            
+
+                            </li>
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/score-e-cei/"
+                                 id=""
+                                 class=" lc-sub-contain ">
+                                Score e CEI
+                              </a>
+
+                            
+                                <ul class="lc-sub-menu">
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/score-e-cei/como-funciona-score-cei/" class="">Como funciona</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/score-e-cei/valores-de-score/" class="">Valores de Score</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/score-e-cei/valores-de-cei/" class="">Valores de CEI</a>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            
+
+                            </li>
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/segmentacao/"
+                                 id=""
+                                 class=" lc-sub-contain ">
+                                Segmentação
+                              </a>
+
+                            
+                                <ul class="lc-sub-menu">
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/segmentacao/quick-filters/" class="">Quick-filters</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/segmentacao/tags/" class="">Tags</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/segmentacao/listas/" class="">Listas</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/segmentacao/segmentos-dinamicos/" class="">Segmentos</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/segmentacao/exemplos-de-segmentacao/" class="">Exemplos de segmentação</a>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            
+
+                            </li>
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/uso-de-variaveis/"
+                                 id=""
+                                 class=" lc-sub-contain ">
+                                Uso de variáveis
+                              </a>
+
+                            
+                                <ul class="lc-sub-menu">
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/uso-de-variaveis/contatos/" class="">Contacts</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/uso-de-variaveis/companies/" class="">Companies</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/uso-de-variaveis/como-montar-variaveis-de-cardtype/" class="">Como montar variáveis de cardtype?</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/uso-de-variaveis/como-o-uso-de-variaveis-de-card-pode-me-ajudar-no-meu-processo/" class="">Como o uso de variáveis de card pode me ajudar no meu processo?</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/uso-de-variaveis/usando-variaveis-dos-campos-padroes-do-card/" class="">Usando variáveis dos campos padrões do card</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/uso-de-variaveis/usando-variaveis-de-campos-customizados-do-cardtype/" class="">Usando variáveis de campos customizados do cardtype</a>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            
+
+                            </li>
+                        
+					
+                        
+                            <span class="lc-topic-category">Aquisição de Leads</span>
+                        
+
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/forms/"
+                                 id=""
+                                 class=" lc-sub-contain ">
+                                Forms
+                              </a>
+
+                            
+                                <ul class="lc-sub-menu">
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/forms/criacao-e-instalacao/" class="">Criação e instalação</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/forms/personalizar-visual/" class="">Personalizar visual</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/forms/integrar-formularios-externos/" class="">Integrar formulários externos</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/forms/tracked-forms/" class="">Tracked Form</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/forms/co-marketing/" class="">Co-Marketing</a>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            
+
+                            </li>
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/pages/"
+                                 id=""
+                                 class=" lc-sub-contain ">
+                                Pages
+                              </a>
+
+                            
+                                <ul class="lc-sub-menu">
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/pages/criacao-e-publicacao/" class="">Criação e publicação</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/pages/estrutura-e-componentes/" class="">Estrutura e componentes</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/pages/filtros-e-conteudo-dinamico/" class="">Filtros e conteúdo dinâmico</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/pages/gerenciar-sites/" class="">Gerenciar sites</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/pages/smart-fields/" class="">Smart fields</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/pages/progressive-profiling/" class="">Progressive profiling</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/pages/configurar-seo/" class="">Configurar SEO</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/pages/utms/" class="">UTM's</a>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            
+
+                            </li>
+                        
+					
+                        
+                            <span class="lc-topic-category">Automatizar Processos</span>
+                        
+
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/automations/"
+                                 id=""
+                                 class=" lc-sub-contain ">
+                                Automations
+                              </a>
+
+                            
+                                <ul class="lc-sub-menu">
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/automations/criar-e-gerenciar-fluxos/" class="">Criar e gerenciar fluxos</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/automations/triggers-gatilhos/" class="">Triggers (gatilhos)</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/automations/steps-passos/" class="">Steps (passos)</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/automations/chamadas-de-api/" class="">Chamadas de API</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/automations/fila-historico-e-eventos/" class="">Fila, histórico e eventos</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/automations/relatorios-de-automacao/" class="">Relatórios de automação</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/automations/prioridades/" class="">Prioridades</a>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            
+
+                            </li>
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/boards/"
+                                 id=""
+                                 class=" lc-sub-contain ">
+                                Boards
+                              </a>
+
+                            
+                                <ul class="lc-sub-menu">
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/boards/criar-tipos-de-cards/" class="">Criar tipos de cards</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/boards/criar-e-personalizar-boards/" class="">Criar e personalizar boards</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/boards/criar-e-gerenciar-cards/" class="">Criar e gerenciar cards</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/boards/regras-de-movimentacao/" class="">Regras de movimentação</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/boards/conectar-boards/" class="">Conectar boards</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/boards/integrar-com-automacao/" class="">Integrar com automação</a>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            
+
+                            </li>
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/milestones/"
+                                 id=""
+                                 class=" ">
+                                Milestones
+                              </a>
+
+                            
+
+                            </li>
+                        
+					
+                        
+                            <span class="lc-topic-category">Relacionamento e Suporte</span>
+                        
+
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/conversations/"
+                                 id=""
+                                 class=" lc-sub-contain ">
+                                Conversations
+                              </a>
+
+                            
+                                <ul class="lc-sub-menu">
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/conversations/habilitar-o-chat/" class="">Habilitar o chat</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/conversations/definir-horario-do-chat/" class="">Definir horário do chat</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/conversations/gerenciar-tickets/" class="">Gerenciar tickets</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/conversations/personalizar-chat/" class="">Personalizar chat</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/conversations/habilitar-conexoes-seguras/" class="">Habilitar conexões seguras</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/conversations/usando-smart-tags/" class="">Usando Smart Tags</a>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            
+
+                            </li>
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/campaigns/"
+                                 id=""
+                                 class=" lc-sub-contain ">
+                                Campaigns
+                              </a>
+
+                            
+                                <ul class="lc-sub-menu">
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/campaigns/criacao-e-gerenciamento/" class="">Criação e gerenciamento</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/campaigns/segmentacao-de-destinatarios/" class="">Segmentação de destinatários</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/campaigns/rastreamento-de-e-mails/" class="">Rastreamento de e-mails</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/campaigns/utms/" class="">UTM's</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/campaigns/teste-visualizacao-e-envio/" class="">Teste, visualização e envio</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/campaigns/status-de-envio/" class="">Status de envio</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/campaigns/grupos-e-listas-de-descadastro/" class="">Grupos e listas de descadastro</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/campaigns/optimization-level-em-campanhas/" class="">Optimization Level em Campanhas</a>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            
+
+                            </li>
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/learning-center/"
+                                 id="open"
+                                 class=" lc-sub-contain lc-menu-open">
+                                Knowledge Base
+                              </a>
+
+                            
+                                <ul class="lc-sub-menu">
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/learning-center/guia-basico-de-markdown/" class="active">Guia básico de Markdown</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/learning-center/criacao-e-gerenciamento/" class="">Criação e gerenciamento</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/learning-center/importacaoexportacao/" class="">Importação/exportação</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/learning-center/personalizacao/" class="">Personalização</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/learning-center/configuracao-de-seo/" class="">Configuração de SEO</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/learning-center/quick-codes/" class="">Usando Quick Codes</a>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            
+
+                            </li>
+                        
+					
+                        
+                            <span class="lc-topic-category">Análise de Dados</span>
+                        
+
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/business-intelligence-bi/"
+                                 id=""
+                                 class=" lc-sub-contain ">
+                                Business Intelligence (BI)
+                              </a>
+
+                            
+                                <ul class="lc-sub-menu">
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/business-intelligence-bi/tabelas-de-dados/" class="">Tabelas de dados</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/business-intelligence-bi/reports/" class="">Reports</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/business-intelligence-bi/dashboards/" class="">Dashboards</a>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            
+
+                            </li>
+                        
+					
+                        
+                            <span class="lc-topic-category">Configurações Básicas</span>
+                        
+
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/perfil-usuarios-e-times/"
+                                 id=""
+                                 class=" lc-sub-contain ">
+                                Perfil, usuários e times
+                              </a>
+
+                            
+                                <ul class="lc-sub-menu">
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/perfil-usuarios-e-times/meu-perfil/" class="">Meu perfil</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/perfil-usuarios-e-times/usuarios/" class="">Usuários</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/perfil-usuarios-e-times/equipes/" class="">Equipes</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/perfil-usuarios-e-times/permissoes-de-uso/" class="">Permissões de uso</a>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            
+
+                            </li>
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/seguranca-e-modulos/"
+                                 id=""
+                                 class=" lc-sub-contain ">
+                                Segurança e módulos
+                              </a>
+
+                            
+                                <ul class="lc-sub-menu">
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/seguranca-e-modulos/atividade-no-sistema/" class="">Atividade no sistema</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/seguranca-e-modulos/modulos-do-sistema/" class="">Módulos do sistema</a>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            
+
+                            </li>
+                        
+					
+                        
+                            <span class="lc-topic-category">Transacional</span>
+                        
+
+                        
+
+                            <li>
+                              <a href="/br/central-de-ajuda/transacional/"
+                                 id=""
+                                 class=" lc-sub-contain ">
+                                Transacional
+                              </a>
+
+                            
+                                <ul class="lc-sub-menu">
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/transacional/o-que-e-email-transacional/" class="">O que é email transacional?</a>
+                                            </li>
+                                        
+                                    
+                                        
+                                            <li>
+                                                <a href="/br/central-de-ajuda/transacional/como-enviar-seu-primeiro-email-transacional/" class="">Como enviar seu primeiro email transacional?</a>
+                                            </li>
+                                        
+                                    
+                                </ul>
+                            
+
+                            </li>
+                        
+					
+                </ul>
+
+            </aside>
+
+            <div class="lc-article-wrap">
+                <article> -->
+					
+    <h1 class="content-name article">Guia básico de Markdown</h1>
+    <p><strong>Markdown Syntax</strong> é uma sintaxe usada para padronizar e facilitar formatação de texto na web, utilizada em aplicativos como <a href="https://slack.com/">Slack</a> e <a href="https://github.com/">GitHub</a>. Textos estilizados com <strong>Markdown</strong> são, na maioria dos casos, apenas texto com caracteres não-alfabéticos, como <code>#</code>, <code>\*</code> e <code>![]()</code>, usados para a configuração de títulos, listas, itálico, negrito e inserção de imagens.</p>
+<blockquote><p>O Markdown funciona como um conversor de texto para HTML: os caracteres não-alfabéticos são traduzidos como <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code> e <code>&lt;a href&gt;</code>, etc. Já os textos sem formatação entram como parágrafo simples <code>&lt;p&gt;</code>.</p>
+</blockquote>
+<h2>Lista de comandos em Markdown</h2>
+<p>Veja abaixo uma lista dos comandos em markdown e alguns exemplos de seu uso:</p>
+<h3>Titulação</h3>
+<pre class="highlight markdown"><code># Título &lt;h1&gt;
+## Título &lt;h2&gt;
+### Título &lt;h3&gt;
+#### Título &lt;h4&gt;
+##### Título &lt;h5&gt;
+###### Título &lt;h6&gt;</code></pre>
+<h3>Exemplos de titulação</h3>
+<h1>Título 1</h1>
+<h2>Título 2</h2>
+<h3>Título 3</h3>
+<h4>Título 4</h4>
+<h5>Título 5</h5>
+<h6>Título 6</h6>
+<h3>Ênfase</h3>
+<p>Para adicionar ênfase ao conteúdo que será escrito, usa-se o asterisco <code>*</code> ou traço-baixo (<em>underline</em>) <code>_</code>:</p>
+<ul>
+<li><strong>Negrito</strong>: adicione dois asteriscos *<strong>*texto</strong>** ou dois traços-baixos __<strong>texto</strong>__ no início e no fim do conteúdo.</li>
+<li><strong>Itálico</strong>: adicione apenas um asterisco *<em>texto</em>* ou um traço-baixo _<em>texto</em>_ no início e no fim do conteúdo.</li>
+</ul>
+<blockquote><p>Este é um exemplo de um texto que possui uma ênfase em *<strong>*negrito**</strong>, e outro em _<em>itálico</em>_.</p>
+</blockquote>
+<h3>Links</h3>
+<p>Existem duas formas de inserir link em Markdown, através de um <strong>link direto</strong> ou usando um <strong>texto-âncora</strong>:</p>
+<ul>
+<li><p><strong>Texto-âncora</strong>: utilize os caracteres <code>[]()</code>, adicionando entre chaves o texto que você quer que apareça, e entre os parênteses, o endereço de destino, no formato <code>[exemplo](https://exemplo.com/)</code>.</p>
+</li>
+<li><p><strong>Link direto</strong>: envolva o endereço da web em chaves <code>&lt;&gt;</code>. O endereço ficará visível e será clicável pelo usuário. O endereço em forma de link direto tem o formato <code>&lt;https://exemplo.com/&gt;</code>.</p>
+</li>
+</ul>
+<blockquote><p>Este é um <a href="#">link em formato de texto</a>, e este é um link direto <a href="https://pipz.com/">https://pipz.com/</a>.</p>
+</blockquote>
+<h3>Listas de itens</h3>
+<p>Para listas não ordenadas, utilize um asterisco <code>*</code> na frente to item da lista:</p>
+<pre class="highlight markdown"><code>* Item 1
+* Item 2
+* Item 3</code></pre>
+<p>Para listas ordenadas, utilize o número do item seguido de ponto <code>.</code> :</p>
+<pre class="highlight markdown"><code>1. Item 1
+2. Item 2
+3. Item 3</code></pre>
+<p>As listas acima serão exibidas dessa maneira, respectivamente:</p>
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ul>
+<ol>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ol>
+<h3>Imagens</h3>
+<p>O código para inserir uma imagem no conteúdo é semelhante ao código de inserir links-âncora, adicionando um ponto de exclamação <code>!</code> no início do código, como no exemplo abaixo:</p>
+<pre class="highlight markdown"><code>![Alt ou título da imagem](URL da imagem)</code></pre>
+<blockquote><p>Esta é uma linha com uma imagem personalizada <img src="https://pipz.com/static/images/blog/eddie.png" alt="Eddie Feliz">.</p>
+<p>Imagens grandes podem estar em linhas individuais, para serem exibidas em maior tamanho.</p>
+</blockquote>
+<h3>Citação (Quote)</h3>
+<p>Para transformar um texto em uma citação ou comentário, semelhante ao código HTML <code>&lt;blockquote&gt;</code>, utilize o sinal <code>&gt;</code> no início da linha que será formatada:</p>
+<pre class="highlight markdown"><code>&gt;Este é um *blockquote*. O sinal usado abre e fecha este código no HTML. 
+&gt;Para adicionar mais uma linha à citação, basta teclar Enter para um novo
+&gt;código sinal. Isso gerará um novo parágrafo dentro do *blockquote*.
+&gt;Códigos de **negrito**, _itálico_ e &lt;https://links.com&gt; funcionam aqui.</code></pre>
+<p>Como aparece no HTML:</p>
+<blockquote><p>Este é um <em>blockquote</em>. O sinal usado abre e fecha este código no HTML. 
+Para adicionar mais uma linha à citação, basta teclar Enter para um novo
+código sinal. Isso gerará um novo parágrafo dentro do <em>blockquote</em>.
+Códigos de <strong>negrito</strong>, <em>itálico</em> e <a href="https://links.com">https://links.com</a> funcionam aqui.</p>
+</blockquote>
+<h3>Código (Code Highlight)</h3>
+<p>Há dois modos de adicionar trechos de código ao Markdown:</p>
+<ul>
+<li><strong>Código em linha</strong> (<em>inline</em>): adicione um acento grave <code>ˋ</code> no início e no final do código.</li>
+<li><strong>Múltiplas linhas de código</strong>: envolva as linhas de código com três acentos graves <code>ˋˋˋ</code> ou três tils <code>~~~</code>.</li>
+</ul>
+<pre class="highlight markdown"><code> Esta é uma linha que contém um ˋcódigoˋ.
+
+ˋˋˋ
+Esta é uma linha de código
+ ˋˋˋ</code></pre>
+<p>Para especificar que tipo de linguagem está sendo apresentada no bloco de códigos adicionando o nome da linguagem de programação após o <code>ˋˋˋ</code> ou <code>~~~</code>, por exemplo <code>~~~javascript</code> ou <code>~~~ruby</code>. Veja nos exemplos abaixo:</p>
+<pre class="highlight markdown"><code>~~~javascript
+Esta é uma linha de código em Javascript.
+~~~
+
+~~~php
+Esta é uma linha de código em PHP.
+~~~
+
+~~~html
+Esta é uma linha de código em HTML.
+~~~</code></pre>
+<div class="highlight-wrapper javascript"> <div class="highlight javascript"><pre><span></span><span class="nx">Esta</span> <span class="nx">é</span> <span class="nx">uma</span> <span class="nx">linha</span> <span class="nx">de</span> <span class="nx">código</span> <span class="nx">em</span> <span class="nx">Javascript</span><span class="p">.</span>
+</pre></div>
+ </div><div class="highlight-wrapper php"> <div class="highlight php"><pre><span></span><span class="x">Esta é uma linha de código em PHP.</span>
+</pre></div>
+ </div><div class="highlight-wrapper html"> <div class="highlight html"><pre><span></span>Esta é uma linha de código em HTML.
+</pre></div>
+ </div><blockquote><p>Aqui está a lista de <a href="http://pygments.org/languages/">linguagens suportadas</a> pelo Pygments, usada em nosso <strong>Learning Center</strong>.</p>
+</blockquote>
+<h3>Tabela</h3>
+<p>Escolha os títulos das colunas e use <code>|</code> para delimitar as colunas. Depois, utilize hífen <code>-</code> na segunda linha para indicar que acima estão os títulos das colunas, usando novamente o <code>|</code> para delimitar colunas. Veja um exemplo abaixo:</p>
+<pre class="highlight markdown"><code>Exemplo   | Valor do exemplo
+--------- | ------
+Exemplo 1 | R$ 10
+Exemplo 2 | R$ 8
+Exemplo 3 | R$ 7
+Exemplo 4 | R$ 8</code></pre>
+<p>Como aparece no <strong>Learning Center</strong>:</p>
+<table>
+<thead><tr>
+<th>Exemplo</th>
+<th>Valor do exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exemplo 1</td>
+<td>R$ 10</td>
+</tr>
+<tr>
+<td>Exemplo 2</td>
+<td>R$ 8</td>
+</tr>
+<tr>
+<td>Exemplo 3</td>
+<td>R$ 7</td>
+</tr>
+<tr>
+<td>Exemplo 4</td>
+<td>R$ 8</td>
+</tr>
+</tbody>
+</table>
+<p>Para especificar o tipo de alinhamento que deseja ter nas tabelas, utilize <code>:</code> ao lado do campo horizontal de hífens <code>---</code>, na segunda linha da sua tabela. Veja abaixo:</p>
+<ul>
+<li><strong>Alinhado a esquerda</strong>: usar <code>:</code> no lado esquerdo (alinhamento padrão);</li>
+<li><strong>Alinhado a direita</strong>: usar <code>:</code> no lado direito;</li>
+<li><strong>Centralizado</strong>: usar <code>:</code> dos dois lados.</li>
+</ul>
+<p>Veja no exemplo:</p>
+<pre class="highlight markdown"><code>Alinhado a esquerda | Centralizado | Alinhado a direita
+:--------- | :------: | -------:
+Valor | Valor | Valor</code></pre>
+<table>
+<thead><tr>
+<th style="text-align:left">Alinhado a esquerda</th>
+<th style="text-align:center">Centralizado</th>
+<th style="text-align:right">Alinhado a direita</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Valor</td>
+<td style="text-align:center">Valor</td>
+<td style="text-align:right">Valor</td>
+</tr>
+</tbody>
+</table>
+<h2>Próximos passos</h2>
+<ul>
+<li><a href="/central-de-ajuda/learning-center/criacao-e-gerenciamento/">Criação e gerenciamento de bases de conhecimento</a></li>
+<li><a href="/central-de-ajuda/learning-center/importacaoexportacao/">Como importar e exportar bases e seu conteúdo</a></li>
+<li><a href="/central-de-ajuda/learning-center/personalizacao/">Personalização do visual do Learning Center</a></li>
+<li><a href="/central-de-ajuda/learning-center/configuracao-de-seo/">Configurando o SEO de bases, tópicos e artigos</a></li>
+</ul>
+
+
+                </article>
+            </div>
+
+        </section>
+
+        <script>
+            var _pzSearchKey = "1.c370097b";
+            var _pzIndexBase = "knowledge";
+        </script>
+        <script src="/static/modern/js/main.js"></script>
+        <script src="/static/modern/js/search.js"></script>
+        
+        <script>!function(){var a=window.pipz=window.pipz||[];if(!a.initialize)if(a.invoked)window.console&&console.error&&console.error('Snippet included twice.');else{a.invoked=!0;a.methods='trackSubmit trackClick trackLink trackForm pageview reset identify group track ready alias page once off on'.split(' ');a.factory=function(c){return function(){var b=Array.prototype.slice.call(arguments);b.unshift(c);a.push(b);return a}};for(var c=0;c<a.methods.length;c++){var d=a.methods[c];a[d]=a.factory(d)}a.load=function(c){var b=document.createElement('script');b.type='text/javascript';b.async=!0;var d=document.getElementsByTagName('script')[0];d.parentNode.insertBefore(b,d);b.onload=function(){a=window.pipz;a.initialize({'eCentrack.io':{apiKey:c}},{plan:{track:{}}});};b.src='//loader.pipz.io/v1/1.c370097b/pipz.min.js'};a.SNIPPET_VERSION='3.1.0';a.load('ebf35fe75c46fff6159')}}();</script>
+          <script>
+            window.pipzSettings = { enable_chat: true };
+          </script>
+        
+        <script>
+          window.location.hash = "open";
+      </script>
+    </body>
+</html>
