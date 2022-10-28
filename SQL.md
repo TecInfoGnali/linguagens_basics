@@ -62,3 +62,7 @@ BEGIN-- início da transação
 COMMIT-- transação confirmada
 ROLLBACK-- transação cancelada
 END-- mesma função do COMMIT
+
+# PSQL
+\dt - dentro do banco atual, lista as tabelas criadas
+\l  - lista os bancos de dados criados
