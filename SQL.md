@@ -19,6 +19,10 @@ ALTER TABLE *NOMETABELA* ADD FOREIGN KEY (*COLUNA*) REFERENCES *NOMETABELA* **ON
  - **ON UPDATE** CASCADE  - Vai atualizar o registro das chave estrangeiras quando houver update de uma chave referenciada
  - **ON DELETE** CASCADE - Vai Apagar o registro das chave estrangeiras quando uma linha referenciada for deletada
 
+**Tabela a partir de Consulta**
+
+CREATE TABLE *NOMETABELA* AS **(CONSULTA)**
+
 
 # **Alteração de Tabela**
 **Adicionando Coluna**
@@ -67,7 +71,7 @@ END-- mesma função do COMMIT
 \dt - dentro do banco atual, lista as tabelas criadas
 \l  - lista os bancos de dados criados
 
-# Consultas 
+# SELECT (Consultas) 
 Formatações Básicas
 
 ## Renomear
@@ -114,3 +118,14 @@ MAX(COLUNA/EXPRESSÃO) | maior valor de uma coluna ou expressão
 SUM(COLUNA/EXPRESSÃO) | soma dos valores de uma coluna ou expressão
 STDDEV(COLUNA/EXPRESSÃO) | desvio padrão dos valores de uma coluna ou expressão
 VARIANCE(COLUNA/EXPRESSÃO) | variância dos valores de uma coluna ou expressão
+
+# SELECT com FROM/WHERE/ORDER BY (Consultas com condições)
+
+SELECT COLUNA1 [[AS] APELIDOCOLUNA1],
+        COLUNA2 [[AS] APELIDOCOLUNA2],
+        …
+        COLUNAN [[AS] APELIDOCOLUNAN]
+FROM TABELA
+WHERE <CONDIÇÃO>
+ORDER BY EXPRESSÃO1[ASC|DESC] [NULLS {FIRST|LAST}], 
+        [EXPRESSÃO2[ASC|DESC] [NULLS {FIRST|LAST}…];
