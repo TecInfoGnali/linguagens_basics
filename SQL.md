@@ -129,3 +129,28 @@ FROM TABELA
 WHERE <CONDIÇÃO>
 ORDER BY EXPRESSÃO1[ASC|DESC] [NULLS {FIRST|LAST}], 
         [EXPRESSÃO2[ASC|DESC] [NULLS {FIRST|LAST}…];
+
+
+# Grupos
+
+## DISTINCT
+ - Bom para verificar valores não repetidos em uma coluna
+
+SELECT DISTINCT *COLUNA1* FROM *TABELA*;
+
+## GROUP BY
+- Bom para verificar valores não repetidos em uma coluna
+- Associado a funções de agregação: COUNT, MIN, MAX e AVG
+
+SELECT *COLUNA1* FROM *TABELA* GROUP BY *COLUNA1*;
+SELECT *COLUNA1*, COUNT(*) FROM *TABELA* GROUP BY *COLUNA1*;
+
+## Agrupamento com SELECT
+
+SELECT
+    (SELECT COUNT(*) AS "M" FROM FUNCIONARIO WHERE SEXO = 'M'),
+    (SELECT COUNT(*) AS "F" FROM FUNCIONARIO WHERE SEXO = 'F');
+
+
+
+
