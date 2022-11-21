@@ -31,6 +31,10 @@ ALTER TABLE *NOMETABELA* ADD *COLUNA TIPODEDADOS* ;
 **Removendo Coluna**
 ALTER TABLE *NOMETABELA* DROP *COLUNA* ;
 
+**Alterando coluna**
+
+
+
 **Remover Tabela**
 DROP TABLE *NOMETABELA*
 
@@ -58,7 +62,7 @@ WHERE *CONDIÇÃO*;
  - **JOIN** - comando utilizado em junções
 
 Executando no PSQL
-\c *nomedatabase*- se conecta ao banco de dados para começar a construi-lo (usar tudo minusculo)
+
 
 # TRANSAÇÕES
 BEGIN-- início da transação
@@ -70,6 +74,8 @@ END-- mesma função do COMMIT
 # PSQL
 \dt - dentro do banco atual, lista as tabelas criadas
 \l  - lista os bancos de dados criados
+\c *nomedatabase*- se conecta ao banco de dados para começar a construi-lo (usar tudo minusculo)
+
 
 # SELECT (Consultas) 
 Formatações Básicas
@@ -130,6 +136,9 @@ WHERE <CONDIÇÃO>
 ORDER BY EXPRESSÃO1[ASC|DESC] [NULLS {FIRST|LAST}], 
         [EXPRESSÃO2[ASC|DESC] [NULLS {FIRST|LAST}…];
 
+## WHERE
+ - EXISTS(SELECT)
+
 
 # Grupos
 
@@ -173,4 +182,6 @@ SELECT * FROM *TABELA1* NATURAL JOIN *TABELA2*;
 SELECT * FROM *TABELA1* [LEFT / RIGHT / FULL OUTER] JOIN *TABELA2* ON (CONDIÇÃOJUNÇÃO)
 
 SELECT * FROM *TABELA1* [LEFT / RIGHT / FULL OUTER] JOIN *TABELA2* USING (COLUNA_DE_JUNÇÃO)
+
+
 
