@@ -17,3 +17,28 @@
     >$ git pull origin main # pucha as alterações feitas no servidor para o repositorio local.
 
     >$ git remote -v # verifica a qual servidor remoto o Git esta ligado, informa o apelido desse servidor
+
+# Git Pull
+ - Não é importante as alterações locais
+```
+Precisa da branch:
+   git fetch
+   git reset --hard HEAD
+   git merge origin/$CURRENT_BRANCH
+---
+Sem necessidade da Branch
+   git fetch
+   git reset --hard HEAD
+   git merge '@{u}'
+```
+
+ - É necessário verificar e comparar com as alterações locais
+```
+   git pull
+
+Reservar alterações para outro momento
+   git fetch
+   git stash
+   git merge '@{u}'
+   git stash pop
+```
